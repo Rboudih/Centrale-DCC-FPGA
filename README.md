@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/logo_Sorbonne.png" height="60"/>
+</p>
+
 # Centrale DCC sur FPGA — UM4IN108 Systèmes Programmables
  
 Réalisé par :
