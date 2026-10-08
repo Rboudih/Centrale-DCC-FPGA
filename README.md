@@ -79,7 +79,7 @@ Registre de 51 bits qui stocke la trame à émettre. Un signal de commande sur 2
  
 Elle pilote l'ensemble de la centrale : chargement de la trame dans le registre, lecture du bit courant, déclenchement du module `DCC_BIT0` ou `DCC_BIT1` correspondant, décalage du registre, puis temporisation de 6 ms une fois la trame entièrement transmise. Les sorties des deux générateurs de bits sont combinées pour produire le signal DCC final.
  
-![Machine à états globale](Images/mae.jpg)
+![Machine à états globale](images/mae.jpg)
 
 ---
 ### Générateur de trames de test
@@ -92,7 +92,7 @@ Module temporaire qui sélectionne des trames prédéfinies (vitesse, klaxon, et
  
 La centrale est packagée en IP avec l'outil de création d'IP de Vivado. Un **wrapper AXI** relie l'IP au bus : la trame de 51 bits est écrite par le processeur dans deux registres de 32 bits, puis transmise à la centrale. Le signal de reset, actif au niveau bas côté AXI, est adapté aux modules internes qui utilisent un reset actif au niveau haut.
  
-![Architecture interne de l'IP Centrale DCC](Images/IP.png)
+![Architecture interne de l'IP Centrale DCC](images/IP.png)
 
 ---
 ### Block design
@@ -103,7 +103,7 @@ Le système complet est assemblé dans un block design Vivado :
 - **AXI Interconnect** reliant les périphériques au processeur
 - IP **Centrale DCC** et IP **Accéléromètre**
 - deux blocs **GPIO** : interrupteurs et boutons d'un côté, afficheur 7 segments et LEDs de l'autre
-![Block design du système MicroBlaze](Images/block_design_avec_ip.png)
+![Block design du système MicroBlaze](images/block_design_avec_ip.png)
  
 ## Développement logiciel
  
@@ -122,11 +122,11 @@ L'interface repose sur une machine à états à quatre étapes :
  
 L'afficheur 7 segments indique en temps réel l'adresse, la vitesse avec le sens de marche, ou la fonction sélectionnée.
  
-![Affichage 7 segments](Images/A.jpeg)
+![Affichage 7 segments](images/A.jpeg)
 
-![Affichage 7 segments](Images/Add.jpeg)
+![Affichage 7 segments](images/Add.jpeg)
 
-![Affichage 7 segments](fnct.jpeg)
+![Affichage 7 segments](images/fnct.jpeg)
 
 ---
 ## Bonus : pilotage par accéléromètre
