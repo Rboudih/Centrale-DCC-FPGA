@@ -110,7 +110,17 @@ Le système complet est assemblé dans un block design Vivado :
 ## Développement logiciel
  
 Le programme embarqué en C, développé sous Vitis, est organisé en trois parties : construction et envoi des trames DCC (vitesse, fonctions F0 à F20), gestion de l'affichage 7 segments, et boucle principale qui gère l'interface utilisateur. La dernière trame validée est retransmise en permanence pour alimenter les trains en continu.
- 
+
+### Fonctions des locomotives
+
+Au-delà de la vitesse et de la direction, le programme permet d'activer ou de désactiver les fonctions F0 à F20 des locomotives. Selon le décodeur, elles commandent par exemple :
+
+- l'allumage des phares
+- le klaxon
+- les effets sonores de la locomotive (annonce SNCF, bruit de freinage ...)
+
+Chaque fonction se sélectionne avec les boutons de la carte et s'active avec un interrupteur ; la trame correspondante est construite puis envoyée à la centrale.
+
 ### Interface utilisateur
  
 L'interface repose sur une machine à états à quatre étapes :
