@@ -103,6 +103,7 @@ Le système complet est assemblé dans un block design Vivado :
 - **AXI Interconnect** reliant les périphériques au processeur
 - IP **Centrale DCC** et IP **Accéléromètre**
 - deux blocs **GPIO** : interrupteurs et boutons d'un côté, afficheur 7 segments et LEDs de l'autre
+  
 ![Block design du système MicroBlaze](images/block_design_avec_ip.png)
  
 ## Développement logiciel
