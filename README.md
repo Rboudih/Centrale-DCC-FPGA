@@ -7,7 +7,7 @@
 Réalisé par :
  
 - Rabab Boudih — M1 SESI
-- Rym Ben Brahim — M1 SESI
+- Rym Ben Brahim — M1 SAR
   
 Ce projet a été réalisé dans le cadre de l'UE **Systèmes Programmables** du Master SESI de **Sorbonne Université**, sous la direction de Julien Denoulet et Amine Rhouni (mai 2026).
  
