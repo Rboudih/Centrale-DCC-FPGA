@@ -20,7 +20,7 @@ Ce projet a été réalisé dans le cadre de l'UE **Systèmes Programmables** du
 - [Intégration dans un système MicroBlaze](#intégration-dans-un-système-microblaze)
 - [Développement logiciel](#développement-logiciel)
 - [Bonus : pilotage par accéléromètre](#bonus--pilotage-par-accéléromètre)
-- [Validation et résultats](#validation-et-résultats
+- [Validation et résultats](#validation-et-résultats).
 - [Conclusion](#conclusion)
 
 ---
