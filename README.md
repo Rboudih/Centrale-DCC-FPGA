@@ -15,6 +15,7 @@ Ce projet a été réalisé dans le cadre de l'UE **Systèmes Programmables** du
  
 - [Introduction](#introduction)
 - [Matériel et outils](#matériel-et-outils)
+- [Structure du dépôt](#structure-du-dépôt)
 - [Le protocole DCC](#le-protocole-dcc)
 - [Conception matérielle (RTL)](#conception-matérielle-rtl)
 - [Intégration dans un système MicroBlaze](#intégration-dans-un-système-microblaze)
@@ -41,6 +42,22 @@ Le projet se déroule en deux phases :
 - **Vitis** : développement du logiciel embarqué en C
 
 ---
+
+## Structure du dépôt
+
+```
+Centrale-DCC-FPGA/
+├── centrale_dcc_ip/        # IP Centrale DCC
+│   ├── HDL/                # Top de l'IP et wrapper AXI
+│   └── SRC/                # Modules VHDL de la centrale (MAE, registre, générateurs de bits, temporisation, diviseur d'horloge)
+├── my_acc_ip/              # IP Accéléromètre
+│   ├── HDL/                # Top de l'IP et wrapper AXI
+│   └── SRC/                # Contrôleur ADXL362 et interface SPI
+├── projet_train_SW/src/    # Logiciel embarqué en C (DCC, afficheur 7 segments, main)
+├── sim/                    # Testbenches VHDL (bit 1, registre, centrale complète)
+└── rapport_projet.pdf      
+```
+
 ## Le protocole DCC
  
 Le DCC est un standard ferroviaire qui transmet des commandes numériques aux locomotives via les rails. Chaque commande est envoyée sous forme de trame composée de quatre champs :
