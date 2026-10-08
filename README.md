@@ -70,7 +70,7 @@ La centrale est découpée en modules indépendants, chacun simulé avant l'asse
 ---
 ### Génération des bits
  
-Deux modules, `DCC_BIT1` et `DCC_BIT0`, produisent respectivement un bit à 1 et un bit à 0 avec les durées exigées par le protocole. Ils reposent sur la même architecture : un diviseur d'horloge qui fournit une horloge à 1 MHz, un compteur qui mesure les demi-périodes et une machine à états qui commande le niveau de sortie. Seuls les paramètres temporels diffèrent.
+Deux modules, DCC_BIT1 et DCC_BIT0, produisent respectivement un bit à 1 et un bit à 0 avec les durées exigées par le protocole. Ils reposent sur la même architecture : un diviseur d'horloge qui fournit une horloge à 1 MHz, un compteur qui mesure les demi-périodes et une machine à états qui commande le niveau de sortie. Seuls les paramètres temporels diffèrent.
  
 ### Registre DCC
  
@@ -133,10 +133,16 @@ L'interface repose sur une machine à états à quatre étapes :
 | 4. Fonctions | Activation ou désactivation des fonctions F0 à F20 | `btnU` / `btnD` (navigation), `SW0` (on/off), `btnC` (envoi), `btnR` (retour) |
  
 L'afficheur 7 segments indique en temps réel l'adresse, la vitesse avec le sens de marche, ou la fonction sélectionnée.
- 
+
+Affichage de la vitesse en marche arrière
+
 ![Affichage 7 segments](images/A.jpeg)
 
+Affichage de l’adresse du train
+
 ![Affichage 7 segments](images/Add.jpeg)
+
+Affichage d’une fonction
 
 ![Affichage 7 segments](images/fnct.jpeg)
 
@@ -159,6 +165,8 @@ Une nouvelle trame est envoyée à chaque changement, avec un court délai entre
 ## Validation et résultats
  
 Chaque module a été simulé, puis le système complet a été synthétisé et testé sur la carte.
+
+![Affichage 7 segments](images/simultion.png)
  
 | Critère | Résultat |
 |---|---|
