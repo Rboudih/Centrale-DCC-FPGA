@@ -64,7 +64,7 @@ Les trames sont émises en continu, avec un intervalle de 6 ms entre deux trames
  
 La centrale est découpée en modules indépendants, chacun simulé avant l'assemblage final.
  
-![Schéma RTL de la centrale DCC](Images/TOP_DCC.png)
+![Schéma RTL de la centrale DCC](images/TOP_DCC.png)
 
 ---
 ### Génération des bits
